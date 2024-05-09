@@ -14,6 +14,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Generate changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
