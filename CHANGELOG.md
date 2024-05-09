@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/Kshao123/basic-actions-template/compare/v0.2.0...v0.3.0) (2024-05-09)
+
+
+### Features
+
+* change version ([9f74a32](https://github.com/Kshao123/basic-actions-template/commit/9f74a32a142d01861f7aa256c37ac60848957db1))
+
+
+
 # [0.2.0](https://github.com/Kshao123/basic-actions-template/compare/v0.1.0...v0.2.0) (2024-05-09)
 
 
