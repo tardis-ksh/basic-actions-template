@@ -22,6 +22,7 @@ jobs:
             create-summary: true
 
       - name: release drafter
-        uses: release-drafter/release-drafter
+        uses: release-drafter/release-drafter@v6
+        if: steps.changelog.outputs.skipped != 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
