@@ -4,21 +4,25 @@ on:
   push:
     branches:
       - main
-  pull_request:
-  workflow_dispatch:
-#  schedule:
 
 jobs:
-  runners:
+  test:
     runs-on: ubuntu-latest
-#    outputs:
+
     steps:
-      - name: step1
-#        id: stepFirst
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.ref }}
 
-      - run: echo "step1"
+      # default test
+      - uses: ./
+        with:
 
+  test-passing:
+    needs: [test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
 
+    steps:
+      - run: echo "All tests have passed."
